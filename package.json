@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Matt-Boggs/Who-Works-Here/issues"
   },
-  "homepage": "https://github.com/Matt-Boggs/Who-Works-Here#readme"
+  "homepage": "https://github.com/Matt-Boggs/Who-Works-Here#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
 }
