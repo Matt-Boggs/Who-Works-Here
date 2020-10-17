@@ -1,0 +1,19 @@
+{
+  "name": "who-works-here",
+  "version": "1.0.0",
+  "description": "![License](https://img.shields.io/badge/license-MIT-blue.svg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matt-Boggs/Who-Works-Here.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matt-Boggs/Who-Works-Here/issues"
+  },
+  "homepage": "https://github.com/Matt-Boggs/Who-Works-Here#readme"
+}
