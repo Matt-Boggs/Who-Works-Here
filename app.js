@@ -9,95 +9,115 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
-inquirer.prompt(
-    {
-        type: "list",
-        message: "What type of employee are you adding?",
-        choices: [Manager,Engineer,Intern],
-        name: "empType"
-    }
-).then(function(response){
-  console.log(response.empType)
+let empArr = []
 
-// empArr = []
-    switch(response.empType){
-        case "Manager":
-            let questionsM = [{
-                type: "input",
-                message: "What is the employee's name?",
-                name: "name"
-            },
-            {
-                type: "input",
-                message: "What is your employee id?",
-                name: "id"
-            },
-            {
-                type: "input",
-                message: "What is your email address?",
-                name: "email"
-            },
-            {
-                type: "input",
-                message: "What is your office number?",
-                name: "officeNumber"
-            }]
-            inquirer.prompt(questionsM).then(function(response){
-                console.log(response)
-            })
-            break;
-        case "Engineer":
-            let questionsE = [{
-                type: "input",
-                message: "What is the employee's name?",
-                name: "name"
-            },
-            {
-                type: "input",
-                message: "What is your employee id?",
-                name: "id"
-            },
-            {
-                type: "input",
-                message: "What is your email address?",
-                name: "email"
-            },
-            {
-                type: "input",
-                message: "What is your github profile name?",
-                name: "github"
-            }]
-            inquirer.prompt(questionsE).then(function(response){
-                console.log(response)
-            })
-            break;
-        case "Intern":
-            let questionsI = [{
-                type: "input",
-                message: "What is the employee's name?",
-                name: "name"
-            },
-            {
-                type: "input",
-                message: "What is your employee id?",
-                name: "id"
-            },
-            {
-                type: "input",
-                message: "What is your email address?",
-                name: "email"
-            },
-            {
-                type: "input",
-                message: "What is your school?",
-                name: "school"
-            }]
-            inquirer.prompt(questionsI).then(function(response){
-                console.log(response)
-            })
-            break;
-    }
-})
+beginAsking = () => {
+    inquirer.prompt(
+        {
+            type: "list",
+            message: "What type of employee are you adding?",
+            choices: [Manager,Engineer,Intern,"No more employees"],
+            name: "empType"
+        }
+    ).then(function(response){
+    console.log(response.empType)
+
+        switch(response.empType){
+            case "Manager":
+                let questionsM = [{
+                    type: "input",
+                    message: "What is the employee's name?",
+                    name: "name"
+                },
+                {
+                    type: "input",
+                    message: "What is your employee id?",
+                    name: "id"
+                },
+                {
+                    type: "input",
+                    message: "What is your email address?",
+                    name: "email"
+                },
+                {
+                    type: "input",
+                    message: "What is your office number?",
+                    name: "officeNumber"
+                }]
+                inquirer.prompt(questionsM).then(function(response){
+                    let newEmployee = new Manager(response.name,response.id,response.email,response.officeNumber)
+                    empArr.push(newEmployee)
+                    console.log(empArr)
+                    beginAsking()
+                })
+                break;
+            case "Engineer":
+                let questionsE = [{
+                    type: "input",
+                    message: "What is the employee's name?",
+                    name: "name"
+                },
+                {
+                    type: "input",
+                    message: "What is your employee id?",
+                    name: "id"
+                },
+                {
+                    type: "input",
+                    message: "What is your email address?",
+                    name: "email"
+                },
+                {
+                    type: "input",
+                    message: "What is your github profile name?",
+                    name: "github"
+                }]
+                inquirer.prompt(questionsE).then(function(response){
+                    let newEmployee = new Engineer(response.name,response.id,response.email,response.github)
+                    empArr.push(newEmployee)
+                    console.log(empArr)
+                    beginAsking()
+                })
+                break;
+            case "Intern":
+                let questionsI = [{
+                    type: "input",
+                    message: "What is the employee's name?",
+                    name: "name"
+                },
+                {
+                    type: "input",
+                    message: "What is your employee id?",
+                    name: "id"
+                },
+                {
+                    type: "input",
+                    message: "What is your email address?",
+                    name: "email"
+                },
+                {
+                    type: "input",
+                    message: "What is your school?",
+                    name: "school"
+                }]
+                inquirer.prompt(questionsI).then(function(response){
+                    let newEmployee = new Intern(response.name,response.id,response.email,response.school)
+                    empArr.push(newEmployee)
+                    console.log(empArr)
+                    beginAsking()
+                })
+                break;
+            case "No more employees":
+                fs.writeFile(outputPath,render(empArr),function(err){
+                    if(err){
+                    return console.log(err)
+                    }
+                })
+        }
+        console.log(empArr)
+    })
+}
+beginAsking()
 // TEMPLATE LITERAL COMING UP
 
 // Write code to use inquirer to gather information about the development team members,
