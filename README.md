@@ -3,35 +3,35 @@
 # Who Works Here?
 
 ## Info: 
-This project is all about generating a list of your employees
+This Assignment was a practice in constructors, classes and sub classes. The app asks for user input on the employee they wish to add, and generates corresponding cards on an html page.
 
 ## Table of Contents 
- 1.[Installation](#Installation) 
- 2.[Usage](#Usage) 
- 3.[License](#License) 
- 4.[Contributing](#Contributing) 
- 5.[Tests](#Tests) 
- 6.[Questions](#Questions)
+ 1. [Installation](#Installation) 
+ 2. [Usage](#Usage) 
+ 3. [License](#License) 
+ 4. [Contributing](#Contributing) 
+ 5. [Tests](#Tests) 
+ 6. [Questions](#Questions)
 
 ### Installation:
- 1. 
- 2. 
- 3. 
+ 1. Clone down github repository
+ 2. Run: npm install
+ 3. Run: node app.js
 
 
 ### Usage:
- This is a step by step guided process for making a readme, answer all the questions presented, and at the end you will have a readme generated for you with the information that was entered!
+ The user will be asked what type of employee they are adding, and then will be asked questions relevant to the employee type. This input will then be used to fillout relevant information fields in a generated html page.
 
 
 ### License:
  This project is licensed under the MIT license.
 
 ### Contributing:
-At this moment there isnt really anything to contribute to
+Contributing to this application is most useful in the form of refactoring, and perhaps additional employee types
 
 
 ### Tests:
-Testing at this stage is as simple as trying to break the application
+To test the application, In the your CMD, Run: npm run test
 
 ### Questions:
 To contact the author of this repository, reach them via: 
