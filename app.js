@@ -11,16 +11,18 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 inquirer.prompt(
     {
-        type: "input",
-        message: "What type of employee are you adding",
+        type: "list",
+        message: "What type of employee are you adding?",
+        choices: [Manager,Engineer,Intern],
         name: "empType"
     }
-)
-empArr = [Manager,Engineer,Intern]
-switch(empType){
-    case Manager:
-        inquirer.prompt(
-            {
+).then(function(response){
+  console.log(response.empType)
+
+// empArr = []
+    switch(response.empType){
+        case "Manager":
+            let questionsM = [{
                 type: "input",
                 message: "What is the employee's name?",
                 name: "name"
@@ -39,11 +41,13 @@ switch(empType){
                 type: "input",
                 message: "What is your office number?",
                 name: "officeNumber"
-            }
-        )
-    case Engineer:
-        inquirer.prompt(
-            {
+            }]
+            inquirer.prompt(questionsM).then(function(response){
+                console.log(response)
+            })
+            break;
+        case "Engineer":
+            let questionsE = [{
                 type: "input",
                 message: "What is the employee's name?",
                 name: "name"
@@ -62,11 +66,13 @@ switch(empType){
                 type: "input",
                 message: "What is your github profile name?",
                 name: "github"
-            }
-        )
-    case Intern:
-        inquirer.prompt(
-            {
+            }]
+            inquirer.prompt(questionsE).then(function(response){
+                console.log(response)
+            })
+            break;
+        case "Intern":
+            let questionsI = [{
                 type: "input",
                 message: "What is the employee's name?",
                 name: "name"
@@ -85,9 +91,13 @@ switch(empType){
                 type: "input",
                 message: "What is your school?",
                 name: "school"
-            }
-        )
-}
+            }]
+            inquirer.prompt(questionsI).then(function(response){
+                console.log(response)
+            })
+            break;
+    }
+})
 // TEMPLATE LITERAL COMING UP
 
 // Write code to use inquirer to gather information about the development team members,
@@ -112,4 +122,4 @@ switch(empType){
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
-fs.writeFile("team.html", output)
+// fs.writeFile("./output/team.html", output)
