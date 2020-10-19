@@ -11,10 +11,83 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 inquirer.prompt(
     {
-
+        type: "input",
+        message: "What type of employee are you adding",
+        name: "empType"
     }
 )
-
+empArr = [Manager,Engineer,Intern]
+switch(empType){
+    case Manager:
+        inquirer.prompt(
+            {
+                type: "input",
+                message: "What is the employee's name?",
+                name: "name"
+            },
+            {
+                type: "input",
+                message: "What is your employee id?",
+                name: "id"
+            },
+            {
+                type: "input",
+                message: "What is your email address?",
+                name: "email"
+            },
+            {
+                type: "input",
+                message: "What is your office number?",
+                name: "officeNumber"
+            }
+        )
+    case Engineer:
+        inquirer.prompt(
+            {
+                type: "input",
+                message: "What is the employee's name?",
+                name: "name"
+            },
+            {
+                type: "input",
+                message: "What is your employee id?",
+                name: "id"
+            },
+            {
+                type: "input",
+                message: "What is your email address?",
+                name: "email"
+            },
+            {
+                type: "input",
+                message: "What is your github profile name?",
+                name: "github"
+            }
+        )
+    case Intern:
+        inquirer.prompt(
+            {
+                type: "input",
+                message: "What is the employee's name?",
+                name: "name"
+            },
+            {
+                type: "input",
+                message: "What is your employee id?",
+                name: "id"
+            },
+            {
+                type: "input",
+                message: "What is your email address?",
+                name: "email"
+            },
+            {
+                type: "input",
+                message: "What is your school?",
+                name: "school"
+            }
+        )
+}
 // TEMPLATE LITERAL COMING UP
 
 // Write code to use inquirer to gather information about the development team members,
