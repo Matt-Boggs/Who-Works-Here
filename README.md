@@ -31,7 +31,7 @@ Contributing to this application is most useful in the form of refactoring, and 
 
 
 ### Tests:
-To test the application, In the your CMD, Run: npm run test
+To test the application, Run: npm run test
 
 ### Questions:
 To contact the author of this repository, reach them via: 
