@@ -22,6 +22,13 @@ This Assignment was a practice in constructors, classes and sub classes. The app
 ### Usage:
  The user will be asked what type of employee they are adding, and then will be asked questions relevant to the employee type. This input will then be used to fillout relevant information fields in a generated html page.
 
+#### In Use:
+1. ![Manager](https://imgur.com/TKuhxY5) 
+2. ![Engineer](https://imgur.com/8lmKvVh)
+3. ![Intern](https://imgur.com/ovw0qNj)
+4. ![NoMore](https://imgur.com/hXQ4dSD)
+5. ![MyTeam](https://imgur.com/a/M1N4kPu)
+
 
 ### License:
  This project is licensed under the MIT license.
