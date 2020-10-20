@@ -7,7 +7,7 @@ const fs = require("fs");
 
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
-
+const outputPathCSS = path.join(OUTPUT_DIR, "style.css");
 const render = require("./lib/htmlRenderer");
 let empArr = []
 beginAsking = () => {
@@ -102,9 +102,20 @@ beginAsking = () => {
                 break;
             case "No more employees":
                 fs.writeFile(outputPath,render(empArr),function(err){
-                    if(err){
-                    return console.log(err)
+                    if(err){return console.log(err)}
+                })
+                fs.writeFile(outputPathCSS,
+                    `#MeetTeam {
+                        font-family: 'Lobster', cursive; color: aliceblue; font-size: 50pt;
                     }
+                    #MTBG {
+                        background-color: rgb(211, 23, 23);
+                    }
+                    .employee-card{
+                        margin-left: 3px; margin-right: 3px;
+                    }`,
+                    (err) => {
+                    if(err){return console.log(err)}
                 })
         }
     })
