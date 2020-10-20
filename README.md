@@ -27,7 +27,7 @@ This Assignment was a practice in constructors, classes and sub classes. The app
 2. ![Engineer](https://i.imgur.com/8lmKvVh.gif)
 3. ![Intern](https://i.imgur.com/ovw0qNj.gif)
 4. ![NoMore](https://i.imgur.com/hXQ4dSD.gif)
-5. ![MyTeam](https://i.imgur.com/a/M1N4kPu.png)
+5. ![MyTeam](https://i.imgur.com/Wi7WI5z.png)
 
 
 ### License:
