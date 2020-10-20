@@ -23,11 +23,16 @@ This Assignment was a practice in constructors, classes and sub classes. The app
  The user will be asked what type of employee they are adding, and then will be asked questions relevant to the employee type. This input will then be used to fillout relevant information fields in a generated html page.
 
 #### In Use:
-1. ![Manager](https://i.imgur.com/TKuhxY5.gif) 
-2. ![Engineer](https://i.imgur.com/8lmKvVh.gif)
-3. ![Intern](https://i.imgur.com/ovw0qNj.gif)
-4. ![NoMore](https://i.imgur.com/hXQ4dSD.gif)
-5. ![MyTeam](https://i.imgur.com/Wi7WI5z.png)
+##### Manager:
+![Manager](https://i.imgur.com/TKuhxY5.gif) 
+##### Engineer
+![Engineer](https://i.imgur.com/8lmKvVh.gif)
+##### Intern
+![Intern](https://i.imgur.com/ovw0qNj.gif)
+##### End
+![NoMore](https://i.imgur.com/hXQ4dSD.gif)
+##### Generated Page
+![MyTeam](https://i.imgur.com/Wi7WI5z.png)
 
 
 ### License:
